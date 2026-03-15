@@ -12,12 +12,10 @@ const queryClient = new QueryClient();
 
 export default function Layout() {
   return (
-    // SOLO ENRUTADOPRINCIPAL  Y INICIO DE INDEX
     <QueryClientProvider client={queryClient}>
       <Stack screenOptions={{ headerShown: false }}>
         <Stack.Screen name="index" />
       </Stack>
-      {/* <ReactQueryDevtools initialIsOpen={false} /> */}
     </QueryClientProvider>
   );
 }
