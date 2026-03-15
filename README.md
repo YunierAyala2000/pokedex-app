@@ -55,6 +55,10 @@ npx expo start
 
 ![Scroll infinito](public/3.png)
 
+### El ícono de la app se generó con **Gemini** y está en `public/app-icono.png`.
+
+![Icono APP](public/app-icono.png)
+
 ## 🎥 Video de demostración
 
 > Video ubicado en `public/pokedex-app.mp4`
