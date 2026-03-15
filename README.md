@@ -1,50 +1,77 @@
-# Welcome to your Expo app 👋
+# Pokedex App (Expo)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Pokedex App es una aplicación móvil desarrollada con **Expo + React Native** que consume datos de la **PokeAPI**.
 
-## Get started
+## 🧠 ¿Qué hace?
 
-1. Install dependencies
+- Muestra una lista infinita de Pokémon (paginado) usando la API oficial de PokéAPI.
+- Al tocar un Pokémon se muestra su detalle (peso, altura, tipo, stats, etc.).
+- Usa `react-query` para caché y fetching eficiente.
+- Navegación basada en [Expo Router](https://docs.expo.dev/router/introduction) con file-based routing.
 
-   ```bash
-   npm install
-   ```
+## 🧩 Tecnologías clave
 
-2. Start the app
+- **Expo** (React Native) - Base del proyecto
+- **expo-router** - Enrutamiento basado en archivos
+- **@tanstack/react-query** - Fetch, caché y estados de carga
+- **axios** - Cliente HTTP
+- **styled-components** - Estilos en JS
+- **PokeAPI** (https://pokeapi.co/) - Fuente de datos
 
-   ```bash
-   npx expo start
-   ```
+## 🌐 API utilizada
 
-In the output, you'll find options to open the app in a
+Esta app consume los siguientes endpoints de la PokeAPI:
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- `https://pokeapi.co/api/v2/pokemon?limit=20` (lista paginada)
+- `https://pokeapi.co/api/v2/pokemon/{id}` (detalles de cada Pokémon)
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 🚀 Cómo ejecutar
 
-## Get a fresh project
+1. Instalar dependencias
 
-When you're ready, run:
+```bash
+npm install
+```
+
+2. Iniciar la app
+
+```bash
+npx expo start
+```
+
+3. Abrir en:
+
+- Android emulator
+- iOS simulator
+- Expo Go (Android/iOS)
+
+## 📸 Capturas de pantalla
+
+> Nota: las imágenes están en `public/1.png`, `public/2.png`, `public/3.png`.
+
+![Pantalla principal](public/1.png)
+
+![Detalle Pokémon](public/2.png)
+
+![Scroll infinito](public/3.png)
+
+---
+
+## 📦 Estructura principal
+
+- `app/` - Rutas y pantallas (Expo Router)
+- `components/` - Componentes reutilizables (cards, UI)
+- `assets/` - Imágenes y recursos
+- `styles/` - Estilos globales
+
+---
+
+## 🧽 Reset del proyecto
+
+Si quieres empezar desde cero:
 
 ```bash
 npm run reset-project
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Esto moverá el código actual a `app-example/` y generará un `app/` limpio.
