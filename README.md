@@ -55,6 +55,12 @@ npx expo start
 
 ![Scroll infinito](public/3.png)
 
+## 🎥 Video de demostración
+
+> Video ubicado en `public/pokedex-app.mp4`
+
+[Ver video en el navegador](public/pokedex-app.mp4)
+
 ---
 
 ## 📦 Estructura principal
