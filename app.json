@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "curso1",
+    "name": "PokedexJunier",
     "slug": "curso1",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -16,18 +16,19 @@
         "backgroundColor": "#E6F4FE"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.yunperez.curso1"
     },
     "web": {
       "output": "static",
-      "favicon": ""
+      "favicon": "./public/app-icono.png"
     },
     "plugins": [
       "expo-router",
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash-icon.png",
+          "image": "./public/app-icono.png",
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff",
@@ -40,6 +41,12 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "271c73e4-1fe5-40f2-bffa-6f68084d0dff"
+      }
     }
   }
 }

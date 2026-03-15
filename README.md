@@ -156,7 +156,7 @@ Generar APK desde el perfil de desarrollo:
 eas build --profile development --platform android
 ```
 
-#### 2.5) Espera y localiza el APK
+#### 2.5) Espera y localiza el APK Usar esta si tienes una MAC
 
 Al finalizar, verás algo como:
 
@@ -167,42 +167,23 @@ Al finalizar, verás algo como:
 
 ---
 
-## 🚀 Opción 2: Generar APK con `expo build`
+## 🚀 Opción 2: Generar APK (CLI rápido)
 
-✨ Si tu proyecto usa el flujo clásico de Expo (managed), esta es la forma más rápida.
-
-### Paso 1: Instala la CLI de Expo
+⚠️ `expo build:android` ya no está soportado en la CLI local. Usa **EAS Build** (recomendado) con:
 
 ```bash
-npm install -g expo-cli
+npx eas build -p android --profile preview
 ```
 
-O, si usas el sistema nuevo:
+Si quieres construir completamente **local** (sin subir a Expo), agrega `--local`:
 
 ```bash
-npx expo install
+npx eas build -p android --profile preview --local
 ```
 
-### Paso 2: Inicia sesión en Expo
+> Tip: `--profile preview` está definido en `eas.json` y genera un APK. Ajusta el perfil si prefieres `production`.
 
-```bash
-npx expo login
-```
-
-### Paso 3: Genera el APK (local o en la nube)
-
-#### Opción A (recomendada): Build en la nube
-
-```bash
-npx expo build:android -t apk
-```
-
-Al finalizar verás una URL para descargar el APK, por ejemplo:
-
-```
-✔ Build successful
-➡ Download: https://expo.dev/artifacts/eas/abc123.apk
-```
+Al finalizar, verás una URL o ruta local donde descargar el APK.
 
 ---
 
